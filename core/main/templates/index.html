@@ -1,0 +1,17 @@
+<h1>BAREV</h1>
+
+<table border="1">
+{% for x in mymembers %}
+  <tr>
+  <td>{{ x.id }}</td>
+  <td>{{ x.firstname }}</td>
+  <td>{{ x.lastname }}</td>
+  <td><a href="delete/{{ x.id }}">delete</a></td>
+  </tr>
+{% endfor %}
+</table>
+
+<p>
+<a href="{% url 'add' %}">Add member</a>
+<a href="{% url 'go' %}">Go to page</a>
+</p>
